@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Parcial
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <form method="POST">
+        <div class="mb-3">
+            <label for="" class="form-label">Label 1</label>
+            <input type="text" name="nombres" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label for="" class="form-label">Label 2</label>
+            <input type="text" name="apellidos" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label for="" class="form-label">Label 3</label>
+            <input type="text" name="email" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label for="" class="form-label">Label 4</label>
+            <input type="password" name="contrasena" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label for="" class="form-label">Label 5</label>
+            <input type="password" name="contrasena" class="form-control">
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Mostrar datos
+            </label>
+          </div>
+
+        <button class="btn btn-primary" type="submit">Guardar</button>
+    </form>
+
+    <div class="mt-4">
+        <table class="table">
+            <tr>
+                <th>TITULO</th>
+            </tr>
+
+            <tr>
+                <td>Primer resultado</td>
+            </tr>
+
+            <tr>
+                <td>Segundo resultado</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+{% endblock %}

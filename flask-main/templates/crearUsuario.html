@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Crear usuarios
+{% endblock %}
+
+{% block content %}
+<div class="container mt-3">
+    <h1 class="h3 text-center">Crear usuario</h1>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul class=flashes>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+    {% endwith %}
+    <form action="/guardar" method="POST">
+        <div class="mb-3">
+            <label for="" class="form-label">Nombres</label>
+            <input type="text" name="nombres" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label for="" class="form-label">Apellidos</label>
+            <input type="text" name="apellidos" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label for="" class="form-label">Email</label>
+            <input type="text" name="email" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label for="" class="form-label">Contraseña</label>
+            <input type="password" name="contrasena" class="form-control">
+        </div>
+
+        <button class="btn btn-primary" type="submit">Guardar</button>
+        <a class="btn btn-secondary" href="/">Volver</a>
+    </form>
+</div>
+{% endblock %}
+    
